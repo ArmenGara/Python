@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkerboard Assigment</title>
+    <style>
+        table tr td{
+            width: 50px;
+            height: 50px;
+        }
+        .color1{
+            background-color: blue;
+        }
+        .color2{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<table>
+{% for i in range(6): %}
+    <tr>
+        {% for j in range(6): %}
+        <td class="color{{ (i+j)%2+1  }}"
+        ></td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
